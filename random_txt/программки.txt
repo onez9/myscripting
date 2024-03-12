@@ -1,0 +1,23 @@
+charmap
+osk
+mip
+mspaint	
+write
+msconfig
+bootim
+boobles.src
+inetcpl.cpl
+sysdm.cpl
+appwiz.cpl
+services.msc
+discmgmt.msc
+devmgmt.msc
+wf.msc
+powershell_ise
+gpmc.msc - в windows server 2008 R2
+mmc - консоль управления - в windows server 2008 R2
+gpedit.msc - редактор локальной групповой политики
+gpupdate.exe - средство обновления политики безопасности
+eventvwr - просмотрщик событий
+
+824hr84r438r

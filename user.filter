@@ -1,0 +1,3 @@
+CLIENT-HEADER-FILTER: hide-browser-headers-cu hide-browser-headers-cu
+s@^(User-Agent:\s+).*$@$1Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)@i
+s@^(Accept-Language:\s+).*$@$1en-EN,en;q=0.9,en;q=0.8@i

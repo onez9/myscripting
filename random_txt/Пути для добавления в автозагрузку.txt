@@ -1,0 +1,19 @@
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run]
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce]
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices]
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce]
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServices]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce]
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows]
+
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v DisplayName /t REG_SZ /d C:\\Windows\\System32\cmd.exe
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Server" /v DisplayVersion /t REG_SZ /d 1.2
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Server" /v InstallLocation /t REG_SZ /d C:\\Program Files\\1.2
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Server" /v NoModify /t REG_DWORD /d 1
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Server" /v Publisher /t REG_SZ /d ABC
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Server" /v UninstallPath /t REG_SZ /d D:\\test\\Uninstall.bat
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Server" /v UninstallString /t REG_SZ /d D:\\test\\Uninstall.bat

@@ -1,0 +1,1 @@
+﻿Disable-NetFirewallRule -DisplayName "blockVk"

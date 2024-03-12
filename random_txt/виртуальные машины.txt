@@ -1,0 +1,7 @@
+ORACLE VirtualBox 
+Windows Visual PC 
+VMware Workstation 
+QEMU
+XEN
+LibVirt
+VMware Fusion

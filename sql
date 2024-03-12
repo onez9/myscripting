@@ -1,0 +1,1 @@
+/home/zakhar/.local/share/DBeaverData/workspace6/General/Scripts

@@ -1,0 +1,20 @@
+history|grep -i 'ffm'
+ffmpeg -i map.png -vf scale="500:-1" ma.png
+ffmpeg -i 1\ \(copy\ 1\).mp4 -vf subtitles=01mag.ja.srt output.mp4
+ffmpeg -i 1 1\ \(copy\ 1\).mp4 -vf subtitles= 01mag.ja.srt output.mp4
+ffmpeg -i 1 1\ \(copy\ 1\).mp4 -vf subtitles=01mag.ja.srt output.mp4
+ffmpeg -i 1\ \(copy\ 1\).mp4  -i ~/Downloads/sub/01mag.ja.srt -c:v copy -c:a copy -c:s mov_text output.mp4
+ffmpeg -i 1\ \(copy\ 1\).mp4  More? -i ~/Downloads/sub/01mag.ja.srt More? -c copy -c:s mov_text More? output.mp4
+ffmpeg -i 1\ \(copy\ 1\).mp4  ^ -i ~/Downloads/sub/01mag.ja.srt ^ -c copy -c:s mov_text ^ output.mp4
+ffmpeg -i 1\ \(copy\ 1\).mp4  -i ~/Downloads/sub/01mag.ja.srt -c copy -c:s mov_text output.mp4
+ffmpeg -i 1\ \(copy\ 1\).mp4  ^
+ffmpeg -i https://streamtape.com/e/46gxqG8JGZUKgxQ/ -vn -c:a aac -movflags frag_keyframe+empty_moov audio.mp4
+ffmpeg -ss 00:01:00 -i test.mp4 -to 00:02:00 -c copy output.mp4
+history |grep -i ffmpeg
+ffmpeg -i https://jut.su/kiseijuu/episode-1.html -vn -c:a aac -movflags frag_keyframe+empty_moov audio.mp4
+ffmpeg -i mult.jpg -vf scale=320:240 output_320x240.png
+ffmpeg -i 48.png -vf scale="360:-1" 48pp.png
+echo ffmpeg -i 5.png -vf scale="360:-1" 5p.png >> convert.py
+ffmpeg -i 5.png -vf scale="360:-1" 5p.png
+ffmpeg -i 5.png -vf scale="360:-1" 55.png
+sudo pacman -S ffmpeg

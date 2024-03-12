@@ -1,0 +1,2 @@
+Введите команду
+net user администратор /active:yes (для англоязычной версии Windows напишите administrator).

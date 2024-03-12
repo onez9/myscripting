@@ -1,0 +1,127 @@
+
+<script>
+  function dragover_handler(ev) {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+  }
+
+
+  function drop_handler(ev) {
+    ev.preventDefault();
+    // Get the id of the target and add the moved element to the target's DOM
+    const data = ev.dataTransfer.getData("text/plain");
+    console.log(data);
+    ev.target.appendChild(document.getElementById(data));
+  }
+
+
+  function dropHandler(ev) {
+    console.log('File(s) dropped');
+
+    // Prevent default behavior (Prevent file from being opened)
+    ev.preventDefault();
+
+    if (ev.dataTransfer.items) {
+      // Use DataTransferItemList interface to access the file(s)
+      [...ev.dataTransfer.items].forEach((item, i) => {
+        // If dropped items aren't files, reject them
+        console.log(ev.dataTransfer.items);
+        if (item.kind === 'file') {
+          const file = item.getAsFile();
+          console.log(`...file[${i}].name = ${file.name}`);
+          file.text().then(data => {
+            document.getElementById('second').innerText = data;
+            console.log(data);
+          });
+          // console.log(file);
+        }
+      });
+
+
+
+
+
+    } else {
+      // Use DataTransfer interface to access the file(s)
+      [...ev.dataTransfer.files].forEach((file, i) => {
+        // console.log(`...file[${i}].name = ${file.name}`);
+        file.text().then(data => {
+
+          console.log(data);
+        });
+      });
+    }
+  }
+
+
+  function dragOverHandler(ev) {
+    console.log('File(s) in drop zone');
+
+    // Prevent default behavior (Prevent file from being opened)
+    ev.preventDefault();
+  }
+
+</script>
+
+
+<div id="outer">
+  <div id="target" ondrop="dropHandler(event)" ondragover="dragover_handler(event)">
+    Drop Zone
+  </div>
+</div>
+<div id="second">
+
+</div>
+
+
+<style>
+  #target {
+    /* display: block; */
+    /* display: inline-block; */
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    background-color: blue;
+  }
+
+
+  #outer {
+    position: relative;
+    background-color: orange;
+    width: 500px;
+    height: 500px;
+  }
+  #second {
+    position: relative;
+    background-color: lightseagreen;
+    width: 500px;
+    height: 500px;
+    text-align: justify;
+  }
+  /* #outer {
+    width: 600px;
+    height: 600px;
+
+    text-align: center;
+    vertical-align: center; */ /* работает только для самого себя */ /*
+    background-color: rgb(10, 10, 27);
+  } */
+
+  /* #outer-wrapper {
+    display: table;
+  } */
+
+  /* #outer {
+    display: table-cell;
+  } */
+
+
+</style>
