@@ -2,3 +2,5 @@ bu.py
 *bat
 *node_modules/
 kursach/
+*.o
+*.hi
